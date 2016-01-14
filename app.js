@@ -23,7 +23,7 @@ info.onAdd = function (map) {
 info.update = function (props) {
     this._div.innerHTML = (props ?
         '<h3>Tract ' + props.NAME + '</h3><hr /><b>Median Household Income:</b> $' 
-        + props.medianHhi + '<br><b>80% of Median Household Income:</b> ' + (props.medianHhi*0.8).toFixed(2)
+        + (props.medianHhi).toFixed(2) + '<br><b>80% of Median Household Income:</b> $' + (props.medianHhi*0.8).toFixed(2)
         : 'Hover over a tract');
 };
 
